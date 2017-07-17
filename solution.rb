@@ -1,9 +1,6 @@
 require 'sinatra'
 
-get '/' do
-	unless params[:nombre]
-		"<h1>" + "Hola desconocido!" + "</h1>"
-	else
-		"<h1>" + "Hola #{params[:nombre]}" + "!</h1>"
-	end
+get '/makers/:nombre' do
+	"<style>p.capitalize{text-transform: capitalize;}</style>" +
+	"<h1><p class='capitalize'>" + "Hola #{params[:nombre]}" + "!</p></h1>"
 end
