@@ -1,10 +1,8 @@
-<h1>Hola</h1>
-
-<%1.step(50,1) do |i|%>
-	<p><%= i%>
-	<%if i.even?%>
-		Soy Par!</p>
-	<%else%>
-		Soy Impar!</p>
-	<%end%>
-<%end%>
+<h1>Mi cuenta es: 
+	<%= @suma %>
+</h1>
+<% @suma += 1 %>
+<form action="/views" method="post">
+	<input type="hidden" name="valor" value=<%= @suma %>></input>
+	<input type="submit" value="Sumar"></input>
+</form>

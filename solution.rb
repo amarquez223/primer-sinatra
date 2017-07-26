@@ -1,6 +1,11 @@
 require 'sinatra'
 
 get '/' do
-	@nombre = "Juan"
+	@suma = 0
+	erb :index
+end
+
+post '/views' do
+	@suma = params[:valor].to_i
 	erb :index
 end
