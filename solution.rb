@@ -1,11 +1,10 @@
 require 'sinatra'
 
 get '/' do
-	@suma = 0
 	erb :index
 end
 
 post '/views' do
-	@suma = params[:valor].to_i
-	erb :index
+	@texto = params[:texto]
+	erb :index2
 end
