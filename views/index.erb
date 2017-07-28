@@ -1,3 +1,6 @@
-<h1>
-<%= @navegador %>
-</h1>
+<h1><%= @permiso %></h1>
+<% if @permiso == 'soy-un-token-secreto' %>
+Si lo logramos!
+<% else %>
+Sin permiso
+<% end %>

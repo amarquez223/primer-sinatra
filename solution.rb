@@ -1,6 +1,6 @@
 require 'sinatra'
 
 get '/' do
-	@navegador = request.env['HTTP_USER_AGENT']
+	@permiso = request.env['HTTP_PERMISO']
 	erb :index
 end
